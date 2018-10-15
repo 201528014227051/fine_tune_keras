@@ -42,9 +42,9 @@ def construct_model():
     x = base_model.output
     #x = GlobalAveragePooling2D()(x)
     # let's add a fully-connected layer
-    x = Dense(300, activation='relu', name = 'fea300')(x)
+    x2 = Dense(300, activation='relu', name = 'fea300')(x)
     # and a logistic layer -- let's say we have 200 classes
-    predictions = Dense(31, activation='softmax', name = 'output31')(x)
+    predictions = Dense(31, activation='softmax', name = 'output31')(x2)
 
     # this is the model we will train
     model = Model(inputs=base_model.input, outputs=predictions)
