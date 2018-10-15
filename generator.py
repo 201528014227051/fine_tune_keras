@@ -226,8 +226,7 @@ class Generator():
 
     def get_image_features(self, image_name):
         image_features = self.image_names_to_features[image_name]['image_features'][:]
-        image_input = np.zeros((224, 224, 3))
-        return image_input
+        return image_features
     
     def get_voice_features(self, image_name):
         voice_features = self.image_names_to_voice_features[str(image_name)]\
