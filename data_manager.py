@@ -180,7 +180,7 @@ class DataManager(object):
             self.extracted_features = []
             self.image_feature_files = list(set(self.image_files))
             number_of_images = len(self.image_feature_files)
-            for image_arg,image_file in enumerate(self.image_feature_files):
+            for image_arg, image_file in enumerate(self.image_feature_files):
                 image_path = image_directory + image_file
                 if image_arg%100 == 0:
                     print('%.2f %% completed' %
